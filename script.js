@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function(event) {
             var productId = event.target.dataset.id;
             console.log('Product added to cart:', productId);
-            // Add your logic for adding product to cart here
+            // Add your logic for adding product tooo cart here
         });
     });
 });

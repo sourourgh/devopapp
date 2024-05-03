@@ -68,5 +68,4 @@ http.createServer(function (req, res) {
     res.end();
 }).listen(4000); // Le serveur écoute sur le port 4000
 
-    res.end();
-}).listen(4000); // Le serveur écoute sur le port 4000
+

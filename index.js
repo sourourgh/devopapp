@@ -54,7 +54,7 @@ http.createServer(function (req, res) {
 
         <!-- Contenu de la page -->
         <div class="container">
-            <h1>Welcome to the AWS Cloud!</h1>
+            <h1 style="color: #333;">Welcome to the AWS Cloud!</h1> <!-- Ajout du style directement dans la balise h1 -->
             <p>This is a test of CI/CD. Subscribe and like my videos!</p>
             <a href="https://example.com" class="btn btn-primary">Subscribe</a> <!-- Bouton Bootstrap -->
             <a href="https://example.com" class="btn btn-secondary">Like</a> <!-- Bouton Bootstrap -->
@@ -70,4 +70,3 @@ http.createServer(function (req, res) {
     // Fin de la réponse HTTP
     res.end();
 }).listen(4000); // Le serveur écoute sur le port 4000
-

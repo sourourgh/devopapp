@@ -20,6 +20,8 @@ http.createServer(function (req, res) {
             .navbar { background-color: #333; } /* Nouvelle couleur de fond de la barre de navigation */
             .navbar-brand, .nav-link { color: white; }
             h1 { color: #333; } /* Nouvelle couleur du titre */
+            .navbar-toggler-icon { background-color: white; } /* Couleur de l'icône du bouton de navigation */
+            .nav-link { color: white !important; } /* Couleur du texte des liens de navigation */
         </style>
     </head>
     <body>
@@ -68,3 +70,4 @@ http.createServer(function (req, res) {
     // Fin de la réponse HTTP
     res.end();
 }).listen(4000); // Le serveur écoute sur le port 4000
+

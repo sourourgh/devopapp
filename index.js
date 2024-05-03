@@ -1,3 +1,5 @@
+
+
 const http = require('http');
 
 // Create a server object:
@@ -13,6 +15,10 @@ http.createServer(function (req, res) {
     res.write('<title>Welcome to the AWS Cloud!</title>');
     // Link Bootstrap CSS
     res.write('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">');
+    res.write('<style>');
+    res.write('body { background-color: #f8f9fa; }');
+    res.write('.container { margin-top: 50px; text-align: center; }');
+    res.write('</style>');
     res.write('</head>');
     res.write('<body>');
 
@@ -59,4 +65,3 @@ http.createServer(function (req, res) {
     // Fin de la réponse HTTP
     res.end();
 }).listen(4000); // The server object listens on port 4000
-

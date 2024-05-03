@@ -1,51 +1,62 @@
-var http = require('http');
+const http = require('http');
 
 // Create a server object:
 http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'}); // Set the response header
+    res.writeHead(200, {'Content-Type': 'text/html'}); // Set the response header
 
-  // Début de la réponse HTML
-  res.write('<!DOCTYPE html>');
-  res.write('<html lang="en">');
-  res.write('<head>');
-  res.write('<meta charset="UTF-8">');
-  res.write('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
-  res.write('<title>Welcome to the AWS Cloud!</title>');
-  res.write('<style>');
-  res.write('body { font-family: Arial, sans-serif; text-align: center; background-color: #f8f9fa; }');
-  res.write('.container { margin-top: 50px; }');
-  res.write('.title { color: #007bff; font-size: 24px; margin-bottom: 20px; }');
-  res.write('.button { background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-right: 10px; }');
-  res.write('.button-secondary { background-color: #6c757d; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-right: 10px; }');
-  res.write('.input-field { width: 300px; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc; }');
-  res.write('.text-area { width: 300px; height: 100px; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc; }');
-  res.write('</style>');
-  res.write('</head>');
-  res.write('<body>');
+    // Début de la réponse HTML
+    res.write('<!DOCTYPE html>');
+    res.write('<html lang="en">');
+    res.write('<head>');
+    res.write('<meta charset="UTF-8">');
+    res.write('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
+    res.write('<title>Welcome to the AWS Cloud!</title>');
+    // Link Bootstrap CSS
+    res.write('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">');
+    res.write('</head>');
+    res.write('<body>');
 
-  // Contenu de la page
-  res.write('<div class="container">');
-  res.write('<h1 class="title">Welcome to the AWS Cloud!</h1>');
-  res.write('<p>This is a test of CI/CD. Subscribe and like my videos!</p>');
-  res.write('<img src="https://via.placeholder.com/300" alt="AWS Cloud Image">');
-  res.write('<br>');
-  res.write('<a href="https://example.com" class="button">Subscribe</a>');
-  res.write('<a href="https://example.com" class="button-secondary">Like</a>');
-  res.write('<form>');
-  res.write('<input type="text" placeholder="Enter your name" class="input-field">');
-  res.write('<br>');
-  res.write('<input type="text" placeholder="Enter your email" class="input-field">');
-  res.write('<br>');
-  res.write('<textarea placeholder="Enter your message" class="text-area"></textarea>');
-  res.write('<br>');
-  res.write('<button type="submit" class="button">Submit</button>');
-  res.write('</form>');
-  res.write('</div>');
+    // Barre de navigation Bootstrap
+    res.write('<nav class="navbar navbar-expand-lg navbar-light bg-light">');
+    res.write('<a class="navbar-brand" href="#">AWS Cloud</a>');
+    res.write('<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">');
+    res.write('<span class="navbar-toggler-icon"></span>');
+    res.write('</button>');
 
-  // Fin de la réponse HTML
-  res.write('</body>');
-  res.write('</html>');
+    res.write('<div class="collapse navbar-collapse" id="navbarSupportedContent">');
+    res.write('<ul class="navbar-nav mr-auto">');
+    res.write('<li class="nav-item active">');
+    res.write('<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>');
+    res.write('</li>');
+    res.write('<li class="nav-item">');
+    res.write('<a class="nav-link" href="#">Link</a>');
+    res.write('</li>');
+    res.write('<li class="nav-item">');
+    res.write('<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>');
+    res.write('</li>');
+    res.write('</ul>');
+    res.write('<form class="form-inline my-2 my-lg-0">');
+    res.write('<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">');
+    res.write('<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>');
+    res.write('</form>');
+    res.write('</div>');
+    res.write('</nav>');
 
-  // Fin de la réponse HTTP
-  res.end();
+    // Contenu de la page
+    res.write('<div class="container">');
+    res.write('<h1>Welcome to the AWS Cloud!</h1>');
+    res.write('<p>This is a test of CI/CD. Subscribe and like my videos!</p>');
+    res.write('<img src="https://via.placeholder.com/300" alt="AWS Cloud Image">');
+    res.write('<br>');
+    res.write('<a href="https://example.com" class="btn btn-primary">Subscribe</a>'); // Bouton Bootstrap
+    res.write('<a href="https://example.com" class="btn btn-secondary">Like</a>'); // Bouton Bootstrap
+    res.write('</div>');
+
+    // Fin de la réponse HTML
+    res.write('</body>');
+    res.write('</html>');
+
+    // Fin de la réponse HTTP
+    res.end();
 }).listen(4000); // The server object listens on port 4000
+

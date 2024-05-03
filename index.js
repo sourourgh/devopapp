@@ -17,15 +17,16 @@ http.createServer(function (req, res) {
         <style>
             body { background-color: #f8f9fa; }
             .container { margin-top: 50px; text-align: center; }
-            .navbar { background-color: #007bff; }
+            .navbar { background-color: #333; } /* Nouvelle couleur de fond de la barre de navigation */
             .navbar-brand, .nav-link { color: white; }
+            h1 { color: #333; } /* Nouvelle couleur du titre */
         </style>
     </head>
     <body>
 
         <!-- Barre de navigation Bootstrap -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">AWS Cloud</a>
+            <a class="navbar-brand" href="https://example.com">AWS Cloud</a> <!-- Lien modifié pour rediriger vers une autre page -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,13 +34,13 @@ http.createServer(function (req, res) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a> <!-- Changement de texte pour "Accueil" -->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">À propos</a> <!-- Changement de texte pour "À propos" -->
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -67,5 +68,3 @@ http.createServer(function (req, res) {
     // Fin de la réponse HTTP
     res.end();
 }).listen(4000); // Le serveur écoute sur le port 4000
-
-

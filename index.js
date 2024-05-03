@@ -17,7 +17,8 @@ http.createServer(function (req, res) {
         <style>
             body { background-color: #f8f9fa; }
             .container { margin-top: 50px; text-align: center; }
-            #myCarousel { margin-top: 20px; }
+            .navbar { background-color: #007bff; }
+            .navbar-brand, .nav-link { color: white; }
         </style>
     </head>
     <body>
@@ -52,36 +53,6 @@ http.createServer(function (req, res) {
         <div class="container">
             <h1>Welcome to the AWS Cloud!</h1>
             <p>This is a test of CI/CD. Subscribe and like my videos!</p>
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicateurs -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-                <!-- Slides -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://via.placeholder.com/600" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://via.placeholder.com/600" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://via.placeholder.com/600" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <!-- Contrôles -->
-                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            <br>
             <a href="https://example.com" class="btn btn-primary">Subscribe</a> <!-- Bouton Bootstrap -->
             <a href="https://example.com" class="btn btn-secondary">Like</a> <!-- Bouton Bootstrap -->
         </div>
@@ -94,5 +65,8 @@ http.createServer(function (req, res) {
     </html>`);
 
     // Fin de la réponse HTTP
+    res.end();
+}).listen(4000); // Le serveur écoute sur le port 4000
+
     res.end();
 }).listen(4000); // Le serveur écoute sur le port 4000
